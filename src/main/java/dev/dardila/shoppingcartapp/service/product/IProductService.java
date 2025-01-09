@@ -1,16 +1,18 @@
 package dev.dardila.shoppingcartapp.service.product;
 
 import dev.dardila.shoppingcartapp.model.Product;
+import dev.dardila.shoppingcartapp.request.AddProductRequest;
+import dev.dardila.shoppingcartapp.request.UpdateProductRequest;
 
 import java.util.List;
 
 public interface IProductService {
 
-    Product addProduct(Product product);
+    Product addProduct(AddProductRequest product);
 
     Product getProductById(Long id);
     void deleteProduct(Long id);
-    Product updateProduct(Product product, Long productId);
+    Product updateProduct(UpdateProductRequest product, Long productId);
 
     List<Product> getAllProducts();
     List<Product> getProductsByCategory(String category);
